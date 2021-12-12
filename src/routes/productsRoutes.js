@@ -1,19 +1,26 @@
 import {Router} from 'express'
 
-import { createNewProduct, getProducts } from "../controllers/productsController";
+import { createNewProduct, deleteProduct, getProductByID, getProducts, getTotalProducts, updateProduct } from "../controllers/productsController";
 
 const router = Router();
 
-
+//obtener todos los productos
 router.get('/products',getProducts)
 
+//crear nuevo producto
 router.post('/products',createNewProduct)
 
-router.get('/products',getProducts)
+//contar total productos
+router.post('/products/total', getTotalProducts)
 
-router.delete('/products',getProducts)
+//obtener por id
+router.get('/products/:id',getProductByID)
 
-router.put('/products',getProducts)
+//borrar elemento
+router.delete('/products/:id',deleteProduct)
+
+//actualizar
+router.put('/products/:id',updateProduct)
 
 
 export default router;

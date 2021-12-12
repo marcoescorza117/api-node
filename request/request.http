@@ -15,3 +15,29 @@ Content-Type: application/json
     "description": "WebCam usb"
     
 }
+
+
+###
+
+GET {{api}}/1000
+
+
+###
+DELETE {{api}}/8
+
+
+###
+POST {{api}}/total
+
+
+###Update a product
+
+PUT {{api}}/1
+Content-Type: application/json
+
+{
+    "name": "Laptop",
+    "description": "Lenovo Gamming G5",
+    "quantity": 200
+
+}

@@ -1,13 +1,14 @@
 import sql from 'mssql'
+import config from '../config'
 
 const dbSettigs = {
-     user: "marco-api"
-    ,password:"marco123@"
-    ,server:"localhost"
-    ,database:"webstore",
+     user: config.user
+    ,password: config.pass
+    ,server: config.host
+    ,database:config.database,
     dialect: "mssql",
     dialectOptions: {
-        "instanceName": "SQLSERVERLOCAL"
+        "instanceName": config.dbInstanceName
     },
     options:{
         encrypt: true,
@@ -26,8 +27,6 @@ export async function getConnection(){
         console.error(error);
     }
     
-    //const result = await pool.request().query("SELECT 1"
-    //console.log(result);
 
 }
 

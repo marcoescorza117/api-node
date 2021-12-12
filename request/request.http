@@ -1,0 +1,17 @@
+
+###Variable global
+@api = http://localhost:8001/products
+@http = HTTP/1.1
+
+
+GET {{api}} HTTP/1.1
+
+###
+POST {{api}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Webcam Ryzer",
+    "description": "WebCam usb"
+    
+}

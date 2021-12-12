@@ -1,13 +1,13 @@
 import {Router} from 'express'
 
-import { getProducts } from "../controllers/productsController";
+import { createNewProduct, getProducts } from "../controllers/productsController";
 
 const router = Router();
 
 
 router.get('/products',getProducts)
 
-router.post('/products',getProducts)
+router.post('/products',createNewProduct)
 
 router.get('/products',getProducts)
 

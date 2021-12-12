@@ -30,3 +30,6 @@ export async function getConnection(){
     //console.log(result);
 
 }
+
+
+export {sql}
